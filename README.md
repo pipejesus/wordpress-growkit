@@ -1,8 +1,8 @@
 # wordpress-growkit
 A simple growkit for an amazing adventure in the Wordpressland :-)
 
-Installation
-===
+INSTALLATION
+---
 
 Clone this repository to your /wp-content/themes/ Wordpress directory then run:
 
