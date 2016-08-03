@@ -1,5 +1,15 @@
+@import '../vendor/susy/sass/_susy.scss';
+@import "../vendor/breakpoint-sass/stylesheets/_breakpoint.scss";
+// @import "../vendor/vertical-rhythmic/_vertical-rhythmic.scss";
+
 html {
-	background: green;
-	color: red;
+	background: rgba(0,0,0,0.3);
+	color: rgba(0,0,0,0.5);
 	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+}
+
+.hello {
+	@include span(1 of 12);
 }

@@ -1,13 +1,21 @@
+/**
+ *
+ * Credit: Ben Frain
+ * https://benfrain.com/lightning-fast-sass-compiling-with-libsass-node-sass-and-grunt-sass/
+ * Adapted to watch for file changes in subdirectories too
+ *
+ */
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			sass: {
-				files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
+				files: ['sass/**/*.{scss,sass}'],
 				tasks: ['sass:dist']
 			},
 			livereload: {
-				files: ['*.html', '*.php', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+				files: ['**/*.html', '**/*.php', 'js/**/*.{js,json}', 'css/**/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
 				options: {
 					livereload: true
 				}
