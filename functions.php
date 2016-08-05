@@ -4,8 +4,50 @@ add_action( 'init', 'growkit_disable_junk' );
 add_action( 'wp_enqueue_scripts', 'growkit_enqueue_css_and_js');
 add_action( 'wp_footer', 'growkit_add_live_reload' );
 add_action( 'admin_notices', 'growkit_show_missing_plugins' );
+add_action( 'after_setup_theme', 'growkit_setup' );
 
 // add_action('wp', function(){ echo '<pre>';print_r($GLOBALS['wp_filter']); echo '</pre>';exit; } );
+
+/**
+ *
+ * Sets up basic theme functionality
+ *
+ */
+
+function growkit_setup() {
+
+	load_theme_textdomain( 'wordpress-growkit', get_template_directory() . '/languages' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
+	
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'wordpress-growkit' ),
+	));
+	
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	));
+	
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery',
+		'status',
+		'audio',
+		'chat',
+	) );
+	
+	include_once( 'optionspage/growkit-options-page.php' );
+
+}
 
 /**
  *
@@ -18,11 +60,14 @@ function growkit_show_missing_plugins() {
 
 	$plugin_messages = array();
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	$site_url = get_site_url();
 
 	if(!is_plugin_active( 'cmb2/init.php' )) {
-		$plugin_messages[] = 'This theme requires you to install the CMB2 plugin, <a href="http://wordpress.org/extend/plugins/cmb2/">download it from here</a>.';
+		$plugin_messages[] = __( 'Growkit needs the CMB2 plugin.', 'wordpress-growkit' ) . ' <a href="' . $site_url . '/wp-admin/plugin-install.php?tab=plugin-information&plugin=cmb2">' . __( 'Install now', 'wordpress-growkit' ) . '</a>.';
 	}
-
+	if(!is_plugin_active( 'regenerate-thumbnails/regenerate-thumbnails.php' )) {
+		$plugin_messages[] = __( 'Growkit needs the Regenerate Thumbnails plugin.', 'wordpress-growkit' ) . ' <a href="' . $site_url . '/wp-admin/plugin-install.php?tab=plugin-information&plugin=regenerate-thumbnails">' . __( 'Install now', 'wordpress-growkit' ) . '</a>.';
+	}
 	if(count($plugin_messages) > 0) {
 		echo '<div id="message" class="error">';
 		foreach($plugin_messages as $message) {
