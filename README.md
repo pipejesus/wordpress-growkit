@@ -2,12 +2,12 @@
 
 # Wordpress Growkit
 
-A simple growkit for an amazing adventure in the Wordpressland :-)
+A special starter theme for special kind of developers, featuring super fast SASS/SCSS compilation using LibSass, custom options page and tools for creating the site right from the scratch. It has no predefined style and no layout. Instead, it bundles such things like Susy, Compass's Vertical Rhythm mixins and Modular Scale to let you build what you really want - if you like those tools like me, that is. 
 
 INSTALLATION
 ---
 
-Clone this repository to your /wp-content/themes/ Wordpress directory then run:
+Clone this repository to your `/wp-content/themes/` directory then run:
 
 ~~~~
 npm install
