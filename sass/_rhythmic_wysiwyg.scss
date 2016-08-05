@@ -1,0 +1,47 @@
+.rhythmic-wysiwyg {
+
+	p, h1, h2, h3, h4, h5, h6, blockquote {
+
+	}
+
+	blockquote {
+		@include adjust-font-size-to(ms(0));
+		@include trailer();
+	}
+
+	p {
+		@include adjust-font-size-to(ms(0));
+		@include trailer();
+	}
+
+	h1 {
+		@include adjust-font-size-to(ms(6), 3);
+		@include trailer();
+	}
+
+	h2 {
+		@include adjust-font-size-to(ms(5),2);
+		@include trailer();
+	}
+
+	h3 {
+		@include adjust-font-size-to(ms(4));
+		@include trailer();
+	}
+
+	h4 {
+		@include adjust-font-size-to(ms(3));
+		@include trailer();
+	}
+
+	h5 {
+		@include adjust-font-size-to(ms(2));
+		@include trailer();
+	}
+
+	h6 {
+		@include adjust-font-size-to(ms(1));
+		@include trailer();
+	}
+
+}

@@ -1,15 +1,65 @@
+/**
+ *
+ * Import vendor libraries
+ *
+ */
+
 @import '../vendor/susy/sass/_susy.scss';
-@import "../vendor/breakpoint-sass/stylesheets/_breakpoint.scss";
-// @import "../vendor/vertical-rhythmic/_vertical-rhythmic.scss";
+@import '../vendor/breakpoint-sass/stylesheets/_breakpoint.scss';
+@import '../vendor/modular-scale/stylesheets/_modular-scale.scss';
+@import '../vendor/libsass-compass-vertical-rhythm/lib/compass_rhythm';
+
+/**
+ *
+ * Reset the HTML styles
+ *
+ */
+
+@import "reset";
+
+/**
+ *
+ * Set the modular scale and vertical rhythm variables
+ *
+ * For the list of predefined choices of $ms-ratio visit:
+ * https://github.com/modularscale/modularscale-sass#ratios
+ *
+ * To read more about setting the vertical rhythm visit:
+ * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+ *
+ * For dealing with vertical rhythm we're using here a SASS 
+ * version of Compass's vertical rhythm mixins:
+ * 
+ */
+
+$ms-base: 1em;
+$ms-ratio: $major-third;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: false;
+$rhythm-unit: 'rem';
+
+/*----------  Subsection comment block  ----------*/
+
+
+@include establish-baseline();
+
+@import "rhythmic_wysiwyg";
 
 html {
 	background: rgba(0,0,0,0.3);
 	color: rgba(0,0,0,0.5);
-	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: sans-serif;
+	text-transform: uppercase;
 }
 
-.hello {
-	@include span(1 of 12);
+.left {
+	@include span(first 6 of 12);
+	@include debug-vertical-alignment();
+}
+
+.right {
+	@include span(last 6 of 12);
+	@include debug-vertical-alignment();
 }
