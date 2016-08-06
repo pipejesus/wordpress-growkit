@@ -5,7 +5,9 @@
 		"grunt": "1.0.1",
 		"grunt-contrib-watch": "1.0.0",
 		"grunt-sass": "1.2.0",
-		"grunt-newer": "1.2.0"
+		"grunt-newer": "1.2.0",
+		"grunt-changed": "1.1.1",
+		"grunt-autoprefixer": "~3.0.4"
 	},
 	"repository": {
 	  "type": "git",

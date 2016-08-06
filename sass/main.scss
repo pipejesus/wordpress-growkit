@@ -15,8 +15,7 @@
  *
  */
 
-@import "config_general";
-@import "config_vertical_rhythm";
+@import "_config";
 
 /**
  *
@@ -24,7 +23,7 @@
  *
  */
 
-@import "reset";
+@import "_reset";
 
 /**
  *
@@ -41,7 +40,15 @@
  *
  */
 
-@import "mixins";
+@import "_mixins";
+
+/**
+ *
+ * An internal example, simple grid
+ *
+ */
+
+@import "growgrid";
 
 /**
  *
@@ -49,7 +56,7 @@
  *
  */
 
-@import "general";
+@import "_general";
 
 /**
  *
@@ -57,4 +64,4 @@
  *
  */
 
-@import "rhythmic_wysiwyg";
+@import "_rhythmic_wysiwyg";

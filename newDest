@@ -1,0 +1,855 @@
+/**
+ *
+ * A super easy grow grid with some predefined classes
+ * To create a new grid just use .grow or .grow.grow-constrained html element as a container
+ * and a number of .grow-item-[BREAKPOINT]-[SPAN SIZE] elements where:
+ * [BREAKPOINT] in xs, sm, lg, xl, xxl, xxxl
+ * and [SPAN SIZE] in 1 - 
+ *
+ */
+/**
+ *
+ * Max width of a constrained content
+ *
+ */
+/**
+ *
+ * Grid size (how many columns in a row), defaults to standard 12
+ *
+ */
+/**
+ *
+ * Default breakpoints definitions for @media queries,
+ *
+ */
+/**
+ *
+ * Set the modular scale and vertical rhythm variables
+ *
+ * For the list of predefined choices of $ms-ratio visit:
+ * https://github.com/modularscale/modularscale-sass#ratios
+ *
+ * To read more about setting the vertical rhythm visit:
+ * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+ *
+ * For dealing with vertical rhythm we're using here a SASS 
+ * version of Compass's vertical rhythm mixins:
+ * https://github.com/neoeno/libsass-compass-vertical-rhythm
+ *
+ */
+/*----------  .grow is a holder for items  ----------*/
+.grow {
+  zoom: 1;
+}
+
+.grow:after, .grow:before {
+  content: "";
+  display: table;
+}
+
+.grow:after {
+  clear: both;
+}
+
+.grow.grow-constrained {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grow.grow-constrained:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.grow-item-xs-1 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.3333333333%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-2 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.6666666667%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-3 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-4 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-5 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 41.6666666667%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-6 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-7 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 58.3333333333%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-8 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 66.6666666667%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-9 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-10 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 83.3333333333%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-11 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 91.6666666667%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+.grow-item-xs-12 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1.3888888889%;
+  padding-right: 1.3888888889%;
+}
+
+@media (min-width: 481px) {
+  .grow-item-sm-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-sm-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+@media (min-width: 768px) {
+  .grow-item-md-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-md-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+@media (min-width: 960px) {
+  .grow-item-lg-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-lg-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+@media (min-width: 1023px) {
+  .grow-item-xl-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xl-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grow-item-xxl-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxl-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .grow-item-xxxl-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+  .grow-item-xxxl-12 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.3888888889%;
+    padding-right: 1.3888888889%;
+  }
+}
+
+/*# sourceMappingURL=newDest.map */

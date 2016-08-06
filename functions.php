@@ -141,7 +141,7 @@ function growkit_enqueue_css_and_js() {
 
 	wp_register_script( 'main_js', get_bloginfo( 'template_url' ) . '/js/main.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'main_js' );
-	wp_enqueue_style( 'growgrid_css', get_bloginfo( 'template_url' ) . '/css/growgrid.css' );
+	// wp_enqueue_style( 'growgrid_css', get_bloginfo( 'template_url' ) . '/css/growgrid.css' );
 	wp_enqueue_style( 'main_css', get_bloginfo( 'template_url' ) . '/css/main.css' );
 
 }

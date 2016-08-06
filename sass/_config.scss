@@ -1,0 +1,95 @@
+/**
+ *
+ * Max width of a constrained content
+ *
+ */
+
+$content-max-width: 1200px;
+
+/**
+ *
+ * Grid size (how many columns in a row), defaults to standard 12
+ *
+ */
+
+$grid-size: 12;
+$grid-gutters: 0.5;
+
+$susy: (
+  columns: $grid-size,  
+  gutters: $grid-gutters,
+  container: $content-max-width,
+  container-position: 'center',
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  // gutter-position: after,  
+  box-sizing: border-box,
+);
+
+/**
+ *
+ * Default breakpoints definitions for @media queries,
+ *
+ */
+
+$bp: (
+	xs: (
+		min-width: false,
+		max-width: 480px,
+		base-font-size: 16px,
+		base-line-height: 24px,
+		round-to-nearest-half-line: false
+	),
+	sm: (
+		min-width: 481px,
+		max-width: 767px,
+		base-font-size: 16px,
+		base-line-height: 24px,
+		round-to-nearest-half-line: false
+	),
+	md: (
+		min-width: 768px,
+		max-width: 1023px,
+		base-font-size: 16px,
+		base-line-height: 24px,
+		round-to-nearest-half-line: false
+	),
+	lg: (
+		min-width: 1024px,
+		max-width: 1199px,
+		base-font-size: 16px,
+		base-line-height: 24px,
+		round-to-nearest-half-line: false
+	),
+	xl: (
+		min-width: 1200px,
+		max-width: false,
+		base-font-size: 16px,
+		base-line-height: 24px,
+		round-to-nearest-half-line: false
+	),
+);
+
+/**
+ *
+ * Set the modular scale and vertical rhythm variables
+ *
+ * For the list of predefined choices of $ms-ratio visit:
+ * https://github.com/modularscale/modularscale-sass#ratios
+ *
+ * To read more about setting the vertical rhythm visit:
+ * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+ *
+ * For dealing with vertical rhythm we're using here a SASS 
+ * version of Compass's vertical rhythm mixins:
+ * https://github.com/neoeno/libsass-compass-vertical-rhythm
+ *
+ */
+
+$ms-base: 1em;
+$ms-ratio: $major-third;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: false;
+$rhythm-unit: 'rem';

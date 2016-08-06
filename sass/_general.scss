@@ -1,5 +1,6 @@
 html {
-	background: yellow;
+	// background: black;
+	background: pink;
 	// background: rgba(0,0,0,0.3);
 	color: rgba(0,0,0,0.5);
 	letter-spacing: 1px;
@@ -11,9 +12,13 @@ html {
 
 .left {
 	@include debug-vertical-alignment();
-	background: pink;
 }
 
 .right {
 	@include debug-vertical-alignment();
+}
+
+.z {
+	background: red;
+	box-shadow: inset 0px 0px 12px rgba(255,255,255,0.7);
 }

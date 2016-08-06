@@ -9,10 +9,21 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		autoprefixer: {
+		  options: {
+		  	browsers: ['last 20 versions'],
+		  },
+		  dist: {
+		  	expand: true,
+		  	flatten: true,
+		  	src: 'css/*.css',
+		  	dest: 'css/'
+		  }
+		},
 		watch: {
 			sass: {
 				files: ['sass/**/*.{scss,sass}'],
-				tasks: ['newer:sass:dist']
+				tasks: ['sass:dist', 'autoprefixer:dist'],
 			},
 			livereload: {
 				files: ['**/*.html', '**/*.php', 'js/**/*.{js,json}', 'css/**/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
@@ -24,12 +35,14 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				sourceMap: true,
-				outputStyle: 'expanded'
+				outputStyle: 'expanded',
+				precision: 8
 			},
 			dist: {
+				// files: { 'css/main.css' : 'sass/main.scss', 'css/growgrid.css' : 'sass/growgrid.scss' }
 				files : [
 					{
-						src : ['**/*.scss', '!**/_*.scss'],
+						src : ['**/*.scss'], //,'!**/_*.scss' 
 						cwd : 'sass',
 						dest : 'css',
 						ext : '.css',
@@ -39,8 +52,10 @@ module.exports = function(grunt) {
 			}
 		}
 	});
+
 	grunt.registerTask('default', ['sass:dist', 'watch']);
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+
 };
