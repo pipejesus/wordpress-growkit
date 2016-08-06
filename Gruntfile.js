@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['sass/**/*.{scss,sass}'],
-				tasks: ['sass:dist']
+				tasks: ['newer:sass:dist']
 			},
 			livereload: {
 				files: ['**/*.html', '**/*.php', 'js/**/*.{js,json}', 'css/**/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
@@ -24,16 +24,23 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				sourceMap: true,
-				outputStyle: 'compressed'
+				outputStyle: 'expanded'
 			},
 			dist: {
-				files: {
-					'css/main.css': 'sass/main.scss'
-				}
+				files : [
+					{
+						src : ['**/*.scss', '!**/_*.scss'],
+						cwd : 'sass',
+						dest : 'css',
+						ext : '.css',
+						expand : true
+					}
+				],
 			}
 		}
 	});
 	grunt.registerTask('default', ['sass:dist', 'watch']);
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-newer');
 };

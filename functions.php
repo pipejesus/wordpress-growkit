@@ -5,7 +5,7 @@ add_action( 'wp_enqueue_scripts', 'growkit_enqueue_css_and_js');
 add_action( 'wp_footer', 'growkit_add_live_reload' );
 add_action( 'admin_notices', 'growkit_show_missing_plugins' );
 add_action( 'after_setup_theme', 'growkit_setup' );
-
+add_action( 'widgets_init', 'growkit_widgets_init' );
 // add_action('wp', function(){ echo '<pre>';print_r($GLOBALS['wp_filter']); echo '</pre>';exit; } );
 
 /**
@@ -47,6 +47,18 @@ function growkit_setup() {
 	
 	include_once( 'optionspage/growkit-options-page.php' );
 
+}
+
+function growkit_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'wordpress-growkit' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'wordpress-growkit' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 
 /**
@@ -129,6 +141,7 @@ function growkit_enqueue_css_and_js() {
 
 	wp_register_script( 'main_js', get_bloginfo( 'template_url' ) . '/js/main.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'main_js' );
+	wp_enqueue_style( 'growgrid_css', get_bloginfo( 'template_url' ) . '/css/growgrid.css' );
 	wp_enqueue_style( 'main_css', get_bloginfo( 'template_url' ) . '/css/main.css' );
 
 }

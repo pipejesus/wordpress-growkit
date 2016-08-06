@@ -11,6 +11,15 @@
 
 /**
  *
+ * Load the config variables for all things that come up here
+ *
+ */
+
+@import "config_general";
+@import "config_vertical_rhythm";
+
+/**
+ *
  * Reset the HTML styles
  *
  */
@@ -19,47 +28,33 @@
 
 /**
  *
- * Set the modular scale and vertical rhythm variables
+ * Call the Compass's Vertical Rhythm mixin to spit out its style for the html tag
  *
- * For the list of predefined choices of $ms-ratio visit:
- * https://github.com/modularscale/modularscale-sass#ratios
- *
- * To read more about setting the vertical rhythm visit:
- * http://compass-style.org/reference/compass/typography/vertical_rhythm/
- *
- * For dealing with vertical rhythm we're using here a SASS 
- * version of Compass's vertical rhythm mixins:
- * 
  */
-
-$ms-base: 1em;
-$ms-ratio: $major-third;
-$base-font-size: 16px;
-$base-line-height: 24px;
-$round-to-nearest-half-line: false;
-$rhythm-unit: 'rem';
-
-/*----------  Subsection comment block  ----------*/
 
 
 @include establish-baseline();
 
+/**
+ *
+ * Import various mixins (clearfixes, mathematical thingies etc.)
+ *
+ */
+
+@import "mixins";
+
+/**
+ *
+ * Import general, site-wide styles
+ *
+ */
+
+@import "general";
+
+/**
+ *
+ * Import the looks of the rhythmic wysiwyg content
+ *
+ */
+
 @import "rhythmic_wysiwyg";
-
-html {
-	background: rgba(0,0,0,0.3);
-	color: rgba(0,0,0,0.5);
-	letter-spacing: 1px;
-	font-family: sans-serif;
-	text-transform: uppercase;
-}
-
-.left {
-	@include span(first 6 of 12);
-	@include debug-vertical-alignment();
-}
-
-.right {
-	@include span(last 6 of 12);
-	@include debug-vertical-alignment();
-}

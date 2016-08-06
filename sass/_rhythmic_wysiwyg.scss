@@ -1,7 +1,7 @@
 .rhythmic-wysiwyg {
 
 	p, h1, h2, h3, h4, h5, h6, blockquote {
-
+		
 	}
 
 	blockquote {
@@ -15,12 +15,12 @@
 	}
 
 	h1 {
-		@include adjust-font-size-to(ms(6), 3);
+		@include adjust-font-size-to(ms(6));
 		@include trailer();
 	}
 
 	h2 {
-		@include adjust-font-size-to(ms(5),2);
+		@include adjust-font-size-to(ms(5));
 		@include trailer();
 	}
 

@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-	<div class="rhythmic-wysiwyg left">
+
+<div class="grow grow-constrained">
+	<div class="rhythmic-wysiwyg grow-item-md-6 left">
+	<?php dynamic_sidebar('sidebar-1'); ?>
 	<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil suscipit impedit quibusdam repudiandae aspernatur dignissimos harum? Alias sint dolorum dolor odio impedit, sed deserunt, cumque voluptatem aperiam in molestias tempore.</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet eos, repellat ipsa optio odit ipsam eum, nostrum saepe quas et illum placeat! Et sint, exercitationem accusamus incidunt. Numquam, quos.</p>
 	<p>Suscipit quia omnis nesciunt reiciendis quaerat nostrum neque perferendis voluptatibus, officia dicta earum a tenetur recusandae reprehenderit eaque itaque aliquam eum eos quis fuga inventore sed vitae vero illo! Quis.</p>
@@ -15,7 +18,7 @@
 	<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, molestias, eveniet. Cupiditate, cum soluta quasi repellat. Nam eaque omnis earum commodi facere autem perferendis laboriosam distinctio, fuga officiis natus, iusto.</h6>
 	</div>
 
-	<div class="rhythmic-wysiwyg right">
+	<div class="rhythmic-wysiwyg grow-item-md-6 right">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet eos, repellat ipsa optio odit ipsam eum, nostrum saepe quas et illum placeat! Et sint, exercitationem accusamus incidunt. Numquam, quos.</p>
 	<h1>Suscipit quia omnis nesciunt reiciendis quaerat nostrum neque perferendis voluptatibus, officia dicta earum</h1>
 	<p>Suscipit quia omnis nesciunt reiciendis quaerat nostrum neque perferendis voluptatibus, officia dicta earum a tenetur recusandae reprehenderit eaque itaque aliquam eum eos quis fuga inventore sed vitae vero illo! Quis.</p>
@@ -24,6 +27,7 @@
 	<p>Ducimus, odit vel quasi necessitatibus facere laborum vero earum, amet tempore ipsam quis! Dignissimos voluptate magni voluptatum, fuga corporis eum vitae eligendi facere nemo hic voluptatibus? Reprehenderit sunt, eius aliquam.</p>
 	<p>Laborum eius nam ipsum itaque repudiandae optio maiores deleniti ea fugit tempora facilis eos culpa omnis possimus reiciendis magni dolorem, minus sapiente autem. Temporibus distinctio quam, repudiandae. Voluptatibus, totam, nobis.</p>
 	<p>Quod velit sapiente similique culpa doloremque quae quaerat corporis ad veniam praesentium earum vero, non impedit ducimus error officiis consectetur incidunt voluptas adipisci magnam reiciendis, voluptatem consequuntur nulla. Aut, ad!</p>
-	</div>
+	</div>	
+</div>
 
 <?php get_footer(); ?>

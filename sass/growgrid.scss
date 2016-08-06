@@ -1,0 +1,36 @@
+/**
+ *
+ * A super easy grow grid with some predefined classes
+ *
+ */
+
+@import '../vendor/susy/sass/_susy.scss';
+@import '../vendor/breakpoint-sass/stylesheets/_breakpoint.scss';
+@import "config_general";
+@import "mixins";
+
+/*----------  .grow is a holder for items  ----------*/
+
+.grow {
+	@include clearfix();
+
+	&.grow-constrained {
+		max-width: $content-max-width;
+		margin-left: auto;
+		margin-right: auto;
+		background: red;
+	}
+
+}
+
+@each $label, $map in $bp {
+	@include breakpoint( map-get($map, 'min-width') ) {
+		@for $i from 1 through $grid-size {
+			.grow-item-#{$label}-#{$i} {
+				@include gallery($i of 12);			
+			}
+		}		
+	}
+}
+
+
