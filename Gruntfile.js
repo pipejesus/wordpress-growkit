@@ -1,11 +1,3 @@
-/**
- *
- * Credit: Ben Frain
- * https://benfrain.com/lightning-fast-sass-compiling-with-libsass-node-sass-and-grunt-sass/
- * Adapted to watch for file changes in subdirectories too
- *
- */
-
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),

@@ -1,4 +1,24 @@
-/*----------  .grow is a holder for items  ----------*/
+/**
+ *
+ * Create items' width cache as we're going to need these numbers 
+ * many times when generating breakpoints
+ *
+ */
+
+$width-cache: (
+);
+
+@for $i from 1 through $grid-size {
+	$width-cache: map-merge($width-cache, ($i: span($i of $grid-size)));
+}
+
+/**
+ *
+ * Create the container classes for our spanned elements:
+ * Put everything inside .grow-container and add as many .grow (our name for row)
+ * with as many .grow-item-[BREAKPOINT]-[SIZE] as you want 
+ *
+ */
 
 .grow-container {
 	padding-left: gutter();
@@ -16,7 +36,13 @@
 	margin-right: - gutter();
 }
 
-.grow-item-defaults {
+/**
+ *
+ * The .grow-item itself
+ *
+ */
+
+[class*="grow-item"] {
 	padding-left: gutter();
 	padding-right: gutter();
 	box-sizing: border-box;
@@ -24,22 +50,14 @@
 }
 
 @each $label, $map in $bp {
-	@for $i from 1 through $grid-size {
-		.grow-item-#{$label}-#{$i} {
-			@extend .grow-item-defaults;
-		}
-	}
-}
-
-@each $label, $map in $bp {
+	
 	$min_width: map-get($map, 'min-width');
 
 	@if $min_width {
 		@include breakpoint( map-get($map, 'min-width') ) {
 			@for $i from 1 through $grid-size {
 				.grow-item-#{$label}-#{$i} {		
-					// @include span($i of $grid-size);
-					width: span($i of $grid-size);
+					width: map-get($width-cache, $i);
 				}
 			}
 		}
@@ -48,7 +66,7 @@
 	@else {
 		@for $i from 1 through $grid-size {
 			.grow-item-#{$label}-#{$i} {
-				width: span($i of $grid-size);
+				width: map-get($width-cache, $i);
 			}
 		}
 	}
