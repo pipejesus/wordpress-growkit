@@ -6,6 +6,7 @@ add_action( 'wp_footer', 'growkit_add_live_reload' );
 add_action( 'admin_notices', 'growkit_show_missing_plugins' );
 add_action( 'after_setup_theme', 'growkit_setup' );
 add_action( 'widgets_init', 'growkit_widgets_init' );
+
 // add_action('wp', function(){ echo '<pre>';print_r($GLOBALS['wp_filter']); echo '</pre>';exit; } );
 
 /**
@@ -20,6 +21,8 @@ function growkit_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
+
+	add_theme_support( 'custom-logo' );
 	
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'wordpress-growkit' ),
