@@ -27,20 +27,28 @@
 
 /**
  *
- * Call the Compass's Vertical Rhythm mixin to spit out its style for the html tag
- *
- */
-
-
-@include establish-baseline();
-
-/**
- *
  * Import various mixins (clearfixes, mathematical thingies etc.)
  *
  */
 
 @import "_mixins";
+
+/**
+ *
+ * Call the Compass's Vertical Rhythm mixin to spit out its style for the html tag
+ *
+ */
+
+@include establish-baseline();
+
+/**
+ *
+ * Load some nice fonts
+ *
+ */
+
+@import "_fonts";
+
 
 /**
  *

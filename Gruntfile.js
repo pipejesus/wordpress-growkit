@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
 		  options: {
 		  	browsers: ['last 20 versions'],
+			  map: true
 		  },
 		  dist: {
 		  	expand: true,

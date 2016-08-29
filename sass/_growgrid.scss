@@ -20,11 +20,17 @@ $width-cache: (
  *
  */
 
+.grow-container-nopadding {
+	width: 100%;
+	display: block;
+}
+
 .grow-container {
-	padding-left: gutter();
-	padding-right: gutter();
+	padding-left: $container-padding;
+	padding-right: $container-padding;
 	margin-left: auto;
 	margin-right: auto;
+
 	&.constrained {	
 		@include container();
 	}
@@ -43,10 +49,8 @@ $width-cache: (
  */
 
 [class*="grow-item"] {
-	padding-left: gutter();
-	padding-right: gutter();
+	@include gutters();
 	box-sizing: border-box;
-	float: left;	
 }
 
 @each $label, $map in $bp {
@@ -58,6 +62,7 @@ $width-cache: (
 			@for $i from 1 through $grid-size {
 				.grow-item-#{$label}-#{$i} {		
 					width: map-get($width-cache, $i);
+					float: left;
 				}
 			}
 		}
@@ -67,6 +72,7 @@ $width-cache: (
 		@for $i from 1 through $grid-size {
 			.grow-item-#{$label}-#{$i} {
 				width: map-get($width-cache, $i);
+				float: left;
 			}
 		}
 	}

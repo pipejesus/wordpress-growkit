@@ -3,7 +3,7 @@
 <div class="grow-container constrained">
 	<div class="grow">
 		<div class="grow-item-xs-12">
-			index.php
+			<span class="bouncy">Hello Wordpress, hello Growkit index.php !</span>
 		</div>
 	</div>
 </div>
